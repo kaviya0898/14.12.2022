@@ -1,0 +1,32 @@
+package string;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class String2 {
+
+	public static void main(String[] args) {
+		LinkedHashMap<Integer,Integer> map=new LinkedHashMap<>();
+		int arr[]= {1,1,1,1};
+		int ans=0;
+		int k=2;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(map.containsKey(k-arr[i]))
+			{
+				ans+=map.get(k-arr[i]);
+			}
+			if(map.containsKey(arr[i]))
+			{
+				map.put(k-arr[i],map.get(k-arr[i])+1);
+			}
+			else
+			{
+				map.put(arr[i],1);
+			}
+		}
+		System.out.println(ans);
+	}
+
+}
