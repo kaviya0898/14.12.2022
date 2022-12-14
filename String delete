@@ -1,0 +1,43 @@
+package string;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class String2 {
+
+	public static void main(String[] args) {
+		String str="abc Abd aac";
+		int count=0;
+		int max=0;
+		char temp=' ';
+		for(int i=0;i<str.length();i++)
+		{
+			count=1;
+			for(int j=i+1;j<str.length();j++)
+			{
+				if(str.charAt(i)==str.charAt(j))
+				{
+					count++;
+				}
+				if(count>max)
+				{
+					max=count;
+					temp=str.charAt(j);
+				}
+			}
+		}
+		for(int i=0;i<str.length();i++)
+		{
+			if(str.charAt(i)==temp)
+			{
+				continue;
+			}
+			else
+			{
+				System.out.print(str.charAt(i));
+			}
+		}
+	}
+
+}
