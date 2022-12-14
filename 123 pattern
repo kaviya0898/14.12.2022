@@ -1,0 +1,27 @@
+package string;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class String2 {
+
+	public static void main(String[] args) {
+		int n=5;
+		int size=n;
+		for(int i=1;i<=n;i++)
+		{
+			size=n;
+			int mul=i;
+			for(int j=i;j<=n;j++)
+			{
+				System.out.print(mul+" ");
+				mul=mul+size;
+				size--;
+			}
+			
+			System.out.println();
+		}
+	}
+
+}
